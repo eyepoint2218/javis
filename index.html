@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>J.A.R.V.I.S Web</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header>
+      <h1>J.A.R.V.I.S</h1>
+      <p class="subtitle">Just A Rather Very Intelligent System</p>
+    </header>
+
+    <section class="panel status-panel">
+      <div>
+        <span class="label">시간</span>
+        <strong id="clock">--:--:--</strong>
+      </div>
+      <div>
+        <span class="label">상태</span>
+        <strong id="system-status">대기 중</strong>
+      </div>
+    </section>
+
+    <section class="panel chat-panel">
+      <div id="messages" class="messages" aria-live="polite"></div>
+      <form id="command-form" class="command-form">
+        <input id="command-input" type="text" placeholder="예: 시간 알려줘, 계산 15*3" autocomplete="off" required />
+        <button type="submit">전송</button>
+      </form>
+    </section>
+
+    <section class="panel actions-panel">
+      <button data-command="시간 알려줘">시간</button>
+      <button data-command="날짜 알려줘">날짜</button>
+      <button data-command="계산 12*12">빠른 계산</button>
+      <button data-command="오늘 할 일 추천">추천</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
